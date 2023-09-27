@@ -1,5 +1,7 @@
 import { useState } from "react"
 import menuIcon from './assets/icons8-menu.svg'
+import { Link } from "react-router-dom";
+
 const SideBar = () => {
     const [sideBar, setSideBar] = useState(false);
 
@@ -24,11 +26,10 @@ const SideBar = () => {
             }
                     
             <div className={`z-20 top-0  h-screen fixed right-0 w-3/4 bg-blue-300  ease-in-out duration-300 ${ sideBar ? 'translate-x-0' : 'translate-x-full'}`}>
-                
                 <div className="flex flex-col gap-5 text-xl p-10 ">
-                    <button>Home</button>
-                    <button>Projects</button>
-                    <button>Contact</button>
+                    <button><Link to={`/1/bio`}>Bio</Link></button>
+                    <button><Link to={`/1/projects`}>Projects</Link></button>
+                    <button><Link to={`/1/contact`}></Link>Contact</button>
                 </div>
             </div>
         </>
