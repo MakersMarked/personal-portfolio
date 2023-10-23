@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <Hero />
-    <div>
+    <div className=' w-screen flex justify-center'>
      <Outlet /> 
     </div> 
     </>

@@ -29,7 +29,7 @@ const SideBar = () => {
                 <div className="flex flex-col gap-5 text-xl p-10 ">
                     <button><Link to={`/1/bio`}>Bio</Link></button>
                     <button><Link to={`/1/projects`}>Projects</Link></button>
-                    <button><Link to={`/1/contact`}></Link>Contact</button>
+                    <button><Link to={`/1/contact`}>Contact</Link></button>
                 </div>
             </div>
         </>
