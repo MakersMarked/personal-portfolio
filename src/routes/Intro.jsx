@@ -1,17 +1,21 @@
 import TypeWriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 const Intro = () => {
     
     const [loaded, setLoaded] = useState(false);
 
  const handleLoad = () => {
   setLoaded(true);
-  console.log(loaded)
+  
 };
 
+useEffect(()=> {
+    handleLoad()
+    setTimeout(() => console.log(loaded),1000)
+},[loaded])
 
-window.addEventListener('load', handleLoad);
+
 
 
     const fullName = <TypeWriter 
@@ -24,7 +28,7 @@ window.addEventListener('load', handleLoad);
                       .start()
                 }}
                     /> 
-                    
+                   
 return (
     <>
     <div className="  w-screen h-screen flex justify-center items-center flex-col gap-5">
